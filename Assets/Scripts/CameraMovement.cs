@@ -8,11 +8,9 @@ using static System.Numerics.Vector2;
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] float cameraSpeed;
-    [SerializeField] Rigidbody2D cam;
-    public float cameraMove = 0.0f;
-    public Transform up;
-    public Transform down;
+    [SerializeField] float cameraSpeed = 1.0f;
+    [SerializeField] float cameraStop = 1.0f;
+    
     
 
     // Start is called before the first frame update
@@ -24,6 +22,10 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(0, 0 - Time.time, -10);
+        transform.position = new Vector3(0, 0 - (Time.time * cameraSpeed), -10);
+        if (transform.position.y <= cameraStop)
+        {
+            transform.position = new Vector3(0, cameraStop, -10);
+        }
     }
 }
