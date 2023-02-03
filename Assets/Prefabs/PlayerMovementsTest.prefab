@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -1284436160377488651}
   m_Layer: 0
   m_Name: PlayerMovementsTest
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,3 +241,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d25dbc6cd27edd44b1758d09ecb6ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 10

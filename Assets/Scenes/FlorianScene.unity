@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 60920876}
   - component: {fileID: 60920875}
   - component: {fileID: 60920874}
+  - component: {fileID: 60920877}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,6 +208,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &60920877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60920873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66bdee5ce171ded429181edb58b86776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerTransform: {fileID: 1018307335}
+  _CamTransform: {fileID: 60920876}
+--- !u!4 &1018307335 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4852152649099606342, guid: 1d4fbe61202ea7d44b3f6eec00acff83, type: 3}
+  m_PrefabInstance: {fileID: 1685746016}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1685746016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -214,6 +234,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1284436160377488651, guid: 1d4fbe61202ea7d44b3f6eec00acff83, type: 3}
+      propertyPath: _speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4852152649099606342, guid: 1d4fbe61202ea7d44b3f6eec00acff83, type: 3}
       propertyPath: m_RootOrder
       value: 1
