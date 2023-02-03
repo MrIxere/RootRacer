@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4852152649099606342}
   - component: {fileID: 4045411185163947303}
   - component: {fileID: 5664007607934460157}
-  - component: {fileID: 6296705549740698420}
   - component: {fileID: 7874749809002264646}
+  - component: {fileID: 7900856882999986046}
   m_Layer: 0
   m_Name: PlayerMovementsTest
   m_TagString: Untagged
@@ -113,19 +113,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0036198, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &6296705549740698420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8136783165242803892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec35b02af51bd62428e817662e2c86b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Playerbody: {fileID: 7874749809002264646}
 --- !u!50 &7874749809002264646
 Rigidbody2D:
   serializedVersion: 4
@@ -147,3 +134,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7900856882999986046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8136783165242803892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: 0}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
