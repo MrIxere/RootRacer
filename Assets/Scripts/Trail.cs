@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,6 +37,7 @@ public class Trail : MonoBehaviour
         {
             Instantiate(trailPrefab, spawnPoint.transform.position, transform.rotation);
             time = 0;
+            
         }
         time += Time.deltaTime;
         
@@ -44,5 +46,13 @@ public class Trail : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        /*Vector3 _diff = new Vector3 (0.0f, 0.0f, 0.0f );
+        var _trailPrefabTranform = trailPrefab.transform.position;
+        if (_trailPrefabTranform == _diff)
+        {
+            DestroyImmediate(trailPrefab,this);
+        }*/
     }
+    
 }
