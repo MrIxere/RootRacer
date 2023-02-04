@@ -7,7 +7,9 @@ public class UiManager : MonoBehaviour
 {
     [SerializeField] private GameObject _textPlayerOneWin;
 
-    private float _durateTime = 13.0f;
+    private float _duration = 13.0f;
+    
+    private float _elapsedTime = 0.0f;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -16,11 +18,10 @@ public class UiManager : MonoBehaviour
 
     void Update()
     {
-        var _elapsedTime = 0.0f;
-        while (_elapsedTime < _durateTime)
+        while (_elapsedTime < _duration)
         {
             _elapsedTime += Time.deltaTime;
-            if (!(_elapsedTime <= _durateTime)) continue;
+            if (!(_elapsedTime <= _duration)) continue;
             _textPlayerOneWin.SetActive(true);
             break;
         }
