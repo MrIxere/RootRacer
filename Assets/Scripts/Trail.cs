@@ -46,13 +46,11 @@ public class Trail : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        /*Vector3 _diff = new Vector3 (0.0f, 0.0f, 0.0f );
-        var _trailPrefabTranform = trailPrefab.transform.position;
-        if (_trailPrefabTranform == _diff)
-        {
-            DestroyImmediate(trailPrefab,this);
-        }*/
+        OnBecameInvisible();
     }
-    
+
+    private void OnBecameInvisible()
+    {
+        DestroyImmediate(trailPrefab,this);
+    }
 }
