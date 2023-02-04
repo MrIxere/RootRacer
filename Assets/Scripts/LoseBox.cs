@@ -1,36 +1,31 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerCollision : MonoBehaviour
+public class LoseBox : MonoBehaviour
 {
-
+    [SerializeField] private GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-    }
-
-    void Stun()
-    {
-        // Ne plus prendre input pendant 1s
-        //reculer le joueur
         
     }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Obstacle")
+        if (other.tag == "Player1")
         {
-            Debug.Log("collision with obstacle");
-            Stun();
+            gameManager.player2Win = true;
+        }
+
+        if (other.tag == "Player2")
+        {
+            gameManager.player1Win = true;
         }
     }
 }
