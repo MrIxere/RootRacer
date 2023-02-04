@@ -428,16 +428,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: edbb9242b57cbf24bb107e331e1088e6, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 2089390690}
+        m_TargetAssemblyTypeName: MenuUI.Menu, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Play
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &720226914
@@ -562,10 +562,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: edbb9242b57cbf24bb107e331e1088e6, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 2089390690}
+        m_TargetAssemblyTypeName: MenuUI.Menu, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1093,8 +1093,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2089390688}
   - component: {fileID: 2089390687}
-  - component: {fileID: 2089390690}
   - component: {fileID: 2089390689}
+  - component: {fileID: 2089390690}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
