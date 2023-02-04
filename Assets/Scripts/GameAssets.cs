@@ -15,7 +15,7 @@ public class GameAssets : MonoBehaviour
         }
     }
 
-    public SoundAudioClip[] SoundAudioClipArray;
+    public SoundAudioClip[] soundAudioClipArray;
     
     [System.Serializable] 
     public class SoundAudioClip

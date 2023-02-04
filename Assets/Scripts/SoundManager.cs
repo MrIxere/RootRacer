@@ -22,7 +22,7 @@ public static class SoundManager
 
     private static AudioClip GetAudioClip(Sound sound)
     {
-        foreach (GameAssets.SoundAudioClip soundAudioClip in GameAssets.i.SoundAudioClipArray)
+        foreach (GameAssets.SoundAudioClip soundAudioClip in GameAssets.i.soundAudioClipArray)
         {
             if (soundAudioClip.sound == sound)
             {
