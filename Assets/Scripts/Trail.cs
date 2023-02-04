@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,17 +15,14 @@ public class Trail : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.E)|| Input.GetKey(KeyCode.D))
         {
             {
                 transform.Rotate(0.0f,0.0f,0.1f);
             }
-            
         }
-        
         if (Input.GetKey(KeyCode.A))
         {
             if (transform.rotation.z >= -89)
@@ -32,14 +30,29 @@ public class Trail : MonoBehaviour
                 transform.Rotate(0.0f,0.0f,-0.1f);
             }
         }
-
-        transform.position += -transform.up / 190.0f;
+        
+        transform.position += -transform.up / 50;
 
         if (time >= 0.1f)
         {
             Instantiate(trailPrefab, spawnPoint.transform.position, transform.rotation);
             time = 0;
+            
         }
         time += Time.deltaTime;
+        
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        /*Vector3 _diff = new Vector3 (0.0f, 0.0f, 0.0f );
+        var _trailPrefabTranform = trailPrefab.transform.position;
+        if (_trailPrefabTranform == _diff)
+        {
+            DestroyImmediate(trailPrefab,this);
+        }*/
+    }
+    
 }
