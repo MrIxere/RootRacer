@@ -9,6 +9,7 @@ public class Countdown : MonoBehaviour
 {
     public int countdownTime;
     public Text countdownDisplay;
+    [SerializeField] private GameObject music;
 
     public void Start()
     {
@@ -27,10 +28,13 @@ public class Countdown : MonoBehaviour
             countdownTime--;
         }
 
+        Instantiate(music);
         countdownDisplay.text = "DIG!!!";
         
         yield return new WaitForSeconds(1f);
         
         countdownDisplay.gameObject.SetActive(false);
+
+        
     }
 }
