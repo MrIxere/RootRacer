@@ -46,11 +46,6 @@ public class Trail : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OnBecameInvisible();
-    }
-
-    private void OnBecameInvisible()
-    {
-        DestroyImmediate(trailPrefab,this);
+    ;
     }
 }
