@@ -160,7 +160,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -220,13 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66bdee5ce171ded429181edb58b86776, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerTransform: {fileID: 1018307335}
-  _CamTransform: {fileID: 60920876}
---- !u!4 &1018307335 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4852152649099606342, guid: 1d4fbe61202ea7d44b3f6eec00acff83, type: 3}
-  m_PrefabInstance: {fileID: 1685746016}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1685746016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236,7 +229,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1284436160377488651, guid: 1d4fbe61202ea7d44b3f6eec00acff83, type: 3}
       propertyPath: _speed
-      value: 2
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045411185163947303, guid: 1d4fbe61202ea7d44b3f6eec00acff83, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4852152649099606342, guid: 1d4fbe61202ea7d44b3f6eec00acff83, type: 3}
       propertyPath: m_RootOrder
@@ -244,11 +241,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852152649099606342, guid: 1d4fbe61202ea7d44b3f6eec00acff83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.8410983
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 4852152649099606342, guid: 1d4fbe61202ea7d44b3f6eec00acff83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.032132268
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4852152649099606342, guid: 1d4fbe61202ea7d44b3f6eec00acff83, type: 3}
       propertyPath: m_LocalPosition.z
