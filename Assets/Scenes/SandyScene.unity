@@ -1390,7 +1390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab9e6821431a5c4419f0edfc24763e51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraSpeed: 2
+  cameraSpeed: 3.05
   cameraStop: -505
 --- !u!61 &2120843431
 BoxCollider2D:

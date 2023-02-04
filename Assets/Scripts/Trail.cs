@@ -14,17 +14,14 @@ public class Trail : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.E)|| Input.GetKey(KeyCode.D))
         {
             {
                 transform.Rotate(0.0f,0.0f,0.1f);
             }
-            
         }
-        
         if (Input.GetKey(KeyCode.A))
         {
             if (transform.rotation.z >= -89)
@@ -32,8 +29,8 @@ public class Trail : MonoBehaviour
                 transform.Rotate(0.0f,0.0f,-0.1f);
             }
         }
-
-        transform.position += -transform.up / 190.0f;
+        
+        transform.position += -transform.up / 50;
 
         if (time >= 0.1f)
         {
@@ -41,5 +38,11 @@ public class Trail : MonoBehaviour
             time = 0;
         }
         time += Time.deltaTime;
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
     }
 }
