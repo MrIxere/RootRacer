@@ -11,8 +11,6 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private float _speed;
     private Vector2 _movement;
     private Rigidbody2D _Player_Body;
-    private int _player_index;
-    private _Player _currentPlayer;
     private float _Attenuation = 10.0f / 5.0f;
 
     private Vector2 _addforce;
@@ -27,12 +25,7 @@ public class PlayerScript : MonoBehaviour
     private void Awake()
     {
         _Player_Body = GetComponent<Rigidbody2D>();
-        _player_index++;
-        if (_player_index <= 1)
-        {
-            _currentPlayer = _Player.PLAYERTWO;
-        }
-        _currentPlayer = _Player.PLAYERONE;
+       
         _addforce.x = 0.0f;
         _addforce.y = -1.0f;
     }
@@ -53,19 +46,6 @@ public class PlayerScript : MonoBehaviour
         {
             var _interpolation = _Player_Body.interpolation;
             _Player_Body.interpolation = _interpolation;
-        }
-        switch (_currentPlayer)
-        {
-            case _Player.PLAYERONE:
-                //InputSystem.FindControl("Move");
-                //_ip.FindAction("WASD");
-                break;
-            case _Player.PLAYERTWO:
-                //InputSystem.FindControls("Move");
-                //_ip.FindAction("MoveTwo");
-                break;
-            default:
-                throw new ArgumentOutOfRangeException();
         }
     }
 }
