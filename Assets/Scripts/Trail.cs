@@ -17,7 +17,7 @@ public class Trail : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.E)|| Input.GetKey(KeyCode.D))
         {
             {
                 transform.Rotate(0.0f,0.0f,0.1f);
