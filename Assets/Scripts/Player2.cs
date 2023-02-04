@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrailP2 : MonoBehaviour
+public class Player2 : MonoBehaviour
 {
     // Start is called before the first frame update
         [SerializeField] private GameObject trailPrefab;
