@@ -33,9 +33,9 @@ public class Trail : MonoBehaviour
             }
         }
 
-        transform.position += -transform.up / 300.0f;
+        transform.position += -transform.up / 190.0f;
 
-        if (time >= 0.5f)
+        if (time >= 0.1f)
         {
             Instantiate(trailPrefab, spawnPoint.transform.position, transform.rotation);
             time = 0;
