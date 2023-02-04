@@ -15,12 +15,13 @@ public class GameAssets : MonoBehaviour
         }
     }
 
-    public AudioClip music;
+    public SoundAudioClip[] SoundAudioClipArray;
     
     [System.Serializable] 
     public class SoundAudioClip
     {
-        //public SoundManager.Sound sound;
+        public SoundManager.Sound sound;
+        public AudioClip audioClip;
     }
 
 }
