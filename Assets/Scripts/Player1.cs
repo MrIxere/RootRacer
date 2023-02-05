@@ -74,7 +74,7 @@ public class Player1 : MonoBehaviour
         {
             if (spikeMoment == true)
             {
-                int rand = Random.Range(0, 5);
+                int rand = Random.Range(0, 4);
                 if (rand == 0)
                 {
                     Instantiate(spikePrefab1, spawnPoint.transform.position, transform.rotation);
