@@ -24,7 +24,7 @@ public class LevelConstructor : MonoBehaviour
 
     void Start()
     {
-        float BlocY = 0.0f;
+        float BlocY = -85.79f;;
         for (int i = 0; i < 4; i++)
         {
             int rand = Random.Range(0, 8);

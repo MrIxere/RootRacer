@@ -20,7 +20,7 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start() //TODO also in game manager
     {
-        transform.position = new Vector3(0.0f, 14.0f, -10.0f);
+        transform.position = new Vector3(0.0f, 32.0f, -10.0f);
     }
 
     // Update is called once per frame
@@ -28,7 +28,7 @@ public class CameraMovement : MonoBehaviour
     {
         if (startingCinematic == true)
         {
-            transform.position += -Vector3.up  * Time.fixedDeltaTime * cameraSpeed/2;
+            transform.position += -Vector3.up  * Time.fixedDeltaTime * cameraSpeed;
             if (Time.time == 6.0f)
             {
                 startingCinematic = false;

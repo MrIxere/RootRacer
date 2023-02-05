@@ -11,10 +11,14 @@ public class Countdown : MonoBehaviour
     public Text countdownDisplay;
     [SerializeField] private GameObject music;
     [SerializeField] private GameObject dig;
+    [SerializeField] private GameObject player1;
+    [SerializeField] private GameObject player2;
 
     public void Start()
     {
         StartCoroutine(CountdownToStart());
+        player1.SetActive(false);
+        player2.SetActive(false);
     }
 
 
@@ -34,7 +38,8 @@ public class Countdown : MonoBehaviour
         countdownDisplay.text = "DIG!!!";
         
         yield return new WaitForSeconds(1f);
-        
+        player1.SetActive(true);
+        player2.SetActive(true);
         countdownDisplay.gameObject.SetActive(false);
 
         
