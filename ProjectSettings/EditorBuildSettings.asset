@@ -16,6 +16,6 @@ EditorBuildSettings:
     guid: d193e42c4bfc7124b9d53693cced58e7
   - enabled: 1
     path: Assets/Scenes/WinPlayerTwo.unity
-    guid: 9cd8851a94c6f944890797e68d28f718
+    guid: c7432df1b9af82547ab3432a9c20952d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 8c8e5c87221e4c74884cf6cc02cfdaf4, type: 2}
