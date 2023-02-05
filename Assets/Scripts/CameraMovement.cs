@@ -18,6 +18,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private float speedChangingLimit = 0.0f;
 
     private bool startingCinematic = true;
+    private float time = 0.0f;
 
     // Start is called before the first frame update
     void Start() //TODO also in game manager
@@ -28,10 +29,11 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        time += Time.fixedDeltaTime;
         if (startingCinematic == true)
         {
             transform.position += -Vector3.up  * Time.fixedDeltaTime * cameraSpeed;
-            if (Time.time == 6.0f)
+            if (time >= 6.0f)
             {
                 startingCinematic = false;
             }
