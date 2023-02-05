@@ -40,8 +40,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4674329243212978096}
+  - component: {fileID: 7999312065529253097}
   - component: {fileID: 4674329243212978098}
-  - component: {fileID: 7208100342464223374}
   - component: {fileID: -4033979277703010324}
   - component: {fileID: 2817022213625513798}
   m_Layer: 0
@@ -60,13 +60,29 @@ Transform:
   m_GameObject: {fileID: 4674329243212978093}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.05, y: 10.76, z: -8.812942}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4674329242483534684}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7999312065529253097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4674329243212978093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2455955d12dab7b4ea5b2e2c8f235fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trailPrefab: {fileID: 7210220915746129484, guid: ba5da439dff3fde4281bc5eec54853d3, type: 3}
+  spawnPoint: {fileID: 0}
+  stun: {fileID: 7021745354683734908, guid: 4fd7a58f75a25db429b53c2d220a96fa, type: 3}
+  bonus: {fileID: 1575608085617643279, guid: 5cdd18898c66b5e48b804adfd4519873, type: 3}
 --- !u!212 &4674329243212978098
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -119,20 +135,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7208100342464223374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4674329243212978093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d935c0d64c5ee244a62b389274157e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trailPrefab: {fileID: 7210220915746129484, guid: ba5da439dff3fde4281bc5eec54853d3, type: 3}
-  spawnPoint: {fileID: 4674329242483534687}
 --- !u!70 &-4033979277703010324
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
