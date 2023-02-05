@@ -40,5 +40,6 @@ public class UiManager : MonoBehaviour
             whiteScreen.color =  new Color(1.0f, 1.0f, 1.0f, 1.0f -elapsedTime );
             yield return null;
         }
+        Destroy(whiteScreen);
     }
 }
