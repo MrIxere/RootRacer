@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour
     public bool player2Win = false;
     private bool gameEnded = false;
     [SerializeField] private Camera camera;
+    
+    // ScreenShake
+    [SerializeField] private AnimationCurve screenShakeCurve;
+    [SerializeField] private float screenShakeDuration = 3.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,7 @@ public class GameManager : MonoBehaviour
             if (player1Win == true)
             {
                 Debug.Log("Player 1 win");
+                StartCoroutine(Shake());
                 gameEnded = true;
             }
         }
@@ -32,8 +37,24 @@ public class GameManager : MonoBehaviour
             if (player2Win == true)
             {
                 Debug.Log("Player 2 win");
+                StartCoroutine(Shake());
                 gameEnded = true;
             }
         }
+    }
+    
+    IEnumerator Shake()
+    {
+        
+        //Vector3 startPosition = transform.position;
+        float elapsedTime = 0.0f;
+        while (elapsedTime < screenShakeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float strength = screenShakeCurve.Evaluate(elapsedTime / screenShakeDuration);
+            camera.transform.position +=  Random.insideUnitSphere * strength;
+            yield return null;
+        }
+
     }
 }

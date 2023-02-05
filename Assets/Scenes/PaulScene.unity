@@ -550,31 +550,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b98bc405eeaee446acf316a39bf1dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 13.952911
-      value: 14.463196
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  duration: 5
 --- !u!114 &704219509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1503,6 +1478,31 @@ MonoBehaviour:
   player1Win: 0
   player2Win: 0
   camera: {fileID: 704219506}
+  screenShakeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 4.9897165
+      value: 5.032337
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  screenShakeDuration: 5
 --- !u!4 &1852577683
 Transform:
   m_ObjectHideFlags: 0
