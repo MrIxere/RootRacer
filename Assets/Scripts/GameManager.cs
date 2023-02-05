@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
@@ -26,9 +27,9 @@ public class GameManager : MonoBehaviour
         {
             if (player1Win == true)
             {
+                gameEnded = true;
                 Debug.Log("Player 1 win");
                 StartCoroutine(Shake());
-                gameEnded = true;
             }
         }
 
@@ -36,9 +37,9 @@ public class GameManager : MonoBehaviour
         {
             if (player2Win == true)
             {
+                gameEnded = true;
                 Debug.Log("Player 2 win");
                 StartCoroutine(Shake());
-                gameEnded = true;
             }
         }
     }
@@ -55,6 +56,8 @@ public class GameManager : MonoBehaviour
             camera.transform.position +=  Random.insideUnitSphere * strength;
             yield return null;
         }
+
+        SceneManager.LoadScene("WinPlayerOne");
 
     }
 }

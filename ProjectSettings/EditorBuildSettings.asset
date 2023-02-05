@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SandyScene.unity
     guid: c0f97056f2fa0784cb442d607850f085
+  - enabled: 1
+    path: Assets/Scenes/WinPlayerOne.unity
+    guid: 6c7ef5524d167b2428682c40edc80926
+  - enabled: 1
+    path: Assets/Scenes/WinPlayerTwo.unity
+    guid: c7432df1b9af82547ab3432a9c20952d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 8c8e5c87221e4c74884cf6cc02cfdaf4, type: 2}
