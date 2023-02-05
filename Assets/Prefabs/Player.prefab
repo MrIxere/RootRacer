@@ -81,6 +81,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trailPrefab: {fileID: 7210220915746129484, guid: ba5da439dff3fde4281bc5eec54853d3, type: 3}
   spawnPoint: {fileID: 4674329242483534687}
+  stun: {fileID: 7021745354683734908, guid: 4fd7a58f75a25db429b53c2d220a96fa, type: 3}
+  bonus: {fileID: 1575608085617643279, guid: 5cdd18898c66b5e48b804adfd4519873, type: 3}
 --- !u!212 &4674329243212978098
 SpriteRenderer:
   m_ObjectHideFlags: 0
