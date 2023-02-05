@@ -43,14 +43,14 @@ public class Player2 : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             {
-                transform.Rotate(0.0f,0.0f,1f);
+                transform.Rotate(0.0f,0.0f,1.25f);
             }
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             if (transform.rotation.z >= -89)
             {
-                transform.Rotate(0.0f,0.0f,-1f);
+                transform.Rotate(0.0f,0.0f,-1.25f);
             }
         }
         
