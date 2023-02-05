@@ -48,9 +48,6 @@ public class CameraMovement : MonoBehaviour
             }
         }
         
-        
-        
-        
         if (transform.position.y <= cameraStop)
         {
             transform.position = new Vector3(0, cameraStop, -10);
