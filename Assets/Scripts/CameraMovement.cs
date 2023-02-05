@@ -22,7 +22,7 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position = new Vector3(0, 9 - (Time.time * cameraSpeed), -10);
+        transform.position = new Vector3(0, 0 - (Time.time * cameraSpeed), -10);
         if (transform.position.y <= cameraStop)
         {
             transform.position = new Vector3(0, cameraStop, -10);

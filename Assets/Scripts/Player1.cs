@@ -9,6 +9,8 @@ public class Player1 : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private GameObject trailPrefab;
     [SerializeField] private GameObject spawnPoint;
+    [SerializeField] private GameObject stun;
+    [SerializeField] private GameObject bonus;
     float timeForTrail = 0.0f;
     private float timeForStun = 0.0f;
     private bool isStuned = false;
@@ -67,11 +69,13 @@ public class Player1 : MonoBehaviour
         {
             isStuned = true;
             stunDirection = transform.up;
+            Instantiate(stun);
         }
         if (other.tag == "Booster")
         {
             Destroy(other.gameObject);
             speed += 0.1f;
+            Instantiate(bonus);
         }
     }
 }
