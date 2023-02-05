@@ -8,12 +8,14 @@ using static System.Numerics.Vector2;
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] private float originalCameraSpeed = 2.5f;
+    [SerializeField] private float originalCameraSpeed = 2.0f;
     [SerializeField] float cameraSpeed = 3.0f;
     [SerializeField] float cameraStop = 1.0f;
 
     [SerializeField] private GameObject player1;
     [SerializeField] private GameObject player2;
+
+    [SerializeField] private float speedChangingLimit = 0.0f;
 
     private bool startingCinematic = true;
 
@@ -38,20 +40,20 @@ public class CameraMovement : MonoBehaviour
         {
             transform.position += -Vector3.up  * Time.fixedDeltaTime * cameraSpeed;
         
-            if (player1.transform.position.y < transform.position.y - 2)
+            if (player1.transform.position.y < transform.position.y - speedChangingLimit)
             {
-                cameraSpeed = cameraSpeed + 0.005f;
+                cameraSpeed = cameraSpeed + 0.05f;
             }
 
-            if (player2.transform.position.y < transform.position.y - 2)
+            if (player2.transform.position.y < transform.position.y - speedChangingLimit)
             {
-                cameraSpeed = cameraSpeed + 0.005f;
+                cameraSpeed = cameraSpeed + 0.05f;
             }
-            if (player1.transform.position.y  > transform.position.y - 2)
+            if (player1.transform.position.y  > transform.position.y - speedChangingLimit + 1)
             {
-                if (player2.transform.position.y > transform.position.y - 2)
+                if (player2.transform.position.y > transform.position.y - speedChangingLimit + 1)
                 {
-                    cameraSpeed = cameraSpeed - 0.005f;
+                    cameraSpeed = cameraSpeed - 0.1f;
                     if (cameraSpeed < originalCameraSpeed)
                     {
                         cameraSpeed = originalCameraSpeed;
