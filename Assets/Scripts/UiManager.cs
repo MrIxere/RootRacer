@@ -7,7 +7,7 @@ public class UiManager : MonoBehaviour
 {
     [SerializeField] private GameObject _textPlayerOneWin;
 
-    private float _duration = 13.0f;
+    private float _duration = 1.5f;
     
     private float _elapsedTime = 0.0f;
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class UiManager : MonoBehaviour
         while (_elapsedTime < _duration)
         {
             _elapsedTime += Time.deltaTime;
-            if (!(_elapsedTime <= _duration)) continue;
+            if (_elapsedTime >= _duration)
             _textPlayerOneWin.SetActive(true);
             break;
         }
