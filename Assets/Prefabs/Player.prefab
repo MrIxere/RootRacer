@@ -82,6 +82,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trailPrefab: {fileID: 7210220915746129484, guid: ba5da439dff3fde4281bc5eec54853d3, type: 3}
+  spikePrefab1: {fileID: 7210220915746129484, guid: 7b3df6bd67014ac45b44371517243a42, type: 3}
+  spikePrefab2: {fileID: 7210220915746129484, guid: a0caf132549a4244b92ae91d3f192175, type: 3}
+  spikePrefab3: {fileID: 7210220915746129484, guid: 4ce12a424b90033458ff335c99b5b0d3, type: 3}
+  spikePrefab4: {fileID: 7210220915746129484, guid: d5f01c386864a6240b5c38cf4bacaf12, type: 3}
   spawnPoint: {fileID: 4674329242483534687}
   stun: {fileID: 7021745354683734908, guid: 4fd7a58f75a25db429b53c2d220a96fa, type: 3}
   bonus: {fileID: 1575608085617643279, guid: 5cdd18898c66b5e48b804adfd4519873, type: 3}
