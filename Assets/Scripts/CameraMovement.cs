@@ -15,6 +15,8 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private GameObject player1;
     [SerializeField] private GameObject player2;
 
+    private bool startingCinematic = true;
+
     // Start is called before the first frame update
     void Start() //TODO also in game manager
     {
@@ -24,32 +26,43 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position += -Vector3.up  * Time.fixedDeltaTime * cameraSpeed;
-        
-        if (player1.transform.position.y < transform.position.y - 2)
+        if (startingCinematic == true)
         {
-            cameraSpeed = cameraSpeed + 0.005f;
-        }
-
-        if (player2.transform.position.y < transform.position.y - 2)
-        {
-            cameraSpeed = cameraSpeed + 0.005f;
-        }
-        if (player1.transform.position.y  > transform.position.y - 2)
-        {
-            if (player2.transform.position.y > transform.position.y - 2)
+            transform.position += -Vector3.up  * Time.fixedDeltaTime * cameraSpeed/2;
+            if (Time.time == 6.0f)
             {
-                cameraSpeed = cameraSpeed - 0.005f;
-                if (cameraSpeed < originalCameraSpeed)
-                {
-                    cameraSpeed = originalCameraSpeed;
-                }
+                startingCinematic = false;
             }
         }
-        
-        if (transform.position.y <= cameraStop)
+        else
         {
-            transform.position = new Vector3(0, cameraStop, -10);
+            transform.position += -Vector3.up  * Time.fixedDeltaTime * cameraSpeed;
+        
+            if (player1.transform.position.y < transform.position.y - 2)
+            {
+                cameraSpeed = cameraSpeed + 0.005f;
+            }
+
+            if (player2.transform.position.y < transform.position.y - 2)
+            {
+                cameraSpeed = cameraSpeed + 0.005f;
+            }
+            if (player1.transform.position.y  > transform.position.y - 2)
+            {
+                if (player2.transform.position.y > transform.position.y - 2)
+                {
+                    cameraSpeed = cameraSpeed - 0.005f;
+                    if (cameraSpeed < originalCameraSpeed)
+                    {
+                        cameraSpeed = originalCameraSpeed;
+                    }
+                }
+            }
+        
+            if (transform.position.y <= cameraStop)
+            {
+                transform.position = new Vector3(0, cameraStop, -10);
+            } 
         }
     }
 }
