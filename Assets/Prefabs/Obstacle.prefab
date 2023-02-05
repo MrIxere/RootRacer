@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 963859747854730487}
-  - component: {fileID: 5878499594357823565}
   - component: {fileID: 6953512052941456483}
   - component: {fileID: 3511771487219639730}
   - component: {fileID: 2760696949539039863}
@@ -35,23 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5878499594357823565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3806936507153935502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cb6cb43068c2fd46ba7c593cee39d24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite1: {fileID: 21300000, guid: d158b96d2795c98409d393b09b2e7ad7, type: 3}
-  sprite2: {fileID: 21300000, guid: c9fbb405794255147a3c62eceddc42ee, type: 3}
-  sprite3: {fileID: 21300000, guid: cf329344b7aa84b4089e1a09427bbe47, type: 3}
-  sprite4: {fileID: 21300000, guid: 07b728a175670cc468fbfb96b694d951, type: 3}
-  sprite5: {fileID: 21300000, guid: 4254b3f5c462c5841a087289bc98ec6c, type: 3}
 --- !u!212 &6953512052941456483
 SpriteRenderer:
   m_ObjectHideFlags: 0
