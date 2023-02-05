@@ -19,7 +19,7 @@ public class CameraMovement : MonoBehaviour
     void Start()
     {
         //SoundManager.PlaySound(SoundManager.Sound.Music);
-        transform.position = new Vector3(0.0f, 9.0f, -10.0f);
+        transform.position = new Vector3(0.0f, 14.0f, -10.0f);
     }
 
     // Update is called once per frame
