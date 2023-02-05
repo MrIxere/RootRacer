@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class GameManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     public bool player2Win = false;
     private bool gameEnded = false;
     [SerializeField] private Camera camera;
+    [SerializeField] private RawImage whiteScreen;
     
     // ScreenShake
     [SerializeField] private AnimationCurve screenShakeCurve;
@@ -30,6 +32,7 @@ public class GameManager : MonoBehaviour
                 gameEnded = true;
                 Debug.Log("Player 1 win");
                 StartCoroutine(Shake());
+                StartCoroutine(WinPlayer1());
             }
         }
 
@@ -40,24 +43,33 @@ public class GameManager : MonoBehaviour
                 gameEnded = true;
                 Debug.Log("Player 2 win");
                 StartCoroutine(Shake());
+                StartCoroutine(WinPlayer2());
             }
         }
     }
+
+    IEnumerator WinPlayer1()
+    {
+        yield return new WaitForSeconds(screenShakeDuration);
+        SceneManager.LoadScene("WinPlayerOne");
+    }
     
+    IEnumerator WinPlayer2()
+    {
+        yield return new WaitForSeconds(screenShakeDuration);
+        SceneManager.LoadScene("WinPlayerTwo");
+    }
+
     IEnumerator Shake()
     {
-        
-        //Vector3 startPosition = transform.position;
         float elapsedTime = 0.0f;
         while (elapsedTime < screenShakeDuration)
         {
             elapsedTime += Time.deltaTime;
             float strength = screenShakeCurve.Evaluate(elapsedTime / screenShakeDuration);
             camera.transform.position +=  Random.insideUnitSphere * strength;
+            whiteScreen.color =  new Color(1.0f, 1.0f, 1.0f, elapsedTime -2 );
             yield return null;
         }
-
-        SceneManager.LoadScene("WinPlayerOne");
-
     }
 }

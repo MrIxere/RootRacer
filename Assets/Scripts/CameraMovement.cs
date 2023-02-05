@@ -16,9 +16,8 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private GameObject player2;
 
     // Start is called before the first frame update
-    void Start()
+    void Start() //TODO also in game manager
     {
-        //SoundManager.PlaySound(SoundManager.Sound.Music);
         transform.position = new Vector3(0.0f, 14.0f, -10.0f);
     }
 

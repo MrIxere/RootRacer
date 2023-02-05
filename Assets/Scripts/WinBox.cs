@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class WinBox : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
-    //[SerializeField] private GameObject whiteScreen;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +15,6 @@ public class WinBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //whiteScreen.GetComponent<Image>().color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
